@@ -1,14 +1,14 @@
-const getRandomNumber = function (a, b){
-  const min = Math.min(Math.abs(a), Math.abs(b));
-  const max = Math.max(Math.abs(a), Math.abs(b));
-  return Math.round(Math.random() * (max - min + 1) + min);
+const getRandomNumber = function (first, second) {
+  const min = Math.min(Math.abs(first), Math.abs(second));
+  const max = Math.max(Math.abs(first), Math.abs(second));
+  return (Math.round(Math.random() * (max - min + 1) + min));
 };
 getRandomNumber(3, 23);
 
 
-const getLineLength=function (line, number){
-return line.length >= number ? false : true;
+const getLineLength = function (number, line) {
+ return !(line.length >= number);
 };
-let phrase = 'Съешь ещё этих мягких французских булок';
-getLineLength(phrase, 12);
+const phrase = 'Съешь ещё этих мягких французских булок';
+console.log(getLineLength(12, phrase));
 
