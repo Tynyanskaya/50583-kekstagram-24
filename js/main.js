@@ -10,5 +10,5 @@ const getLineLength = function (number, line) {
  return !(line.length >= number);
 };
 const phrase = 'Съешь ещё этих мягких французских булок';
-console.log(getLineLength(12, phrase));
+getLineLength(12, phrase);
 
