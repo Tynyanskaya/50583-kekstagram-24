@@ -1,20 +1,14 @@
-const randomNumber = function (max, min){
-  if (max <= min){
-   console.log('max не может быть меньше min');
-   return '';
-  }
+const getRandomNumber = function (a, b){
+  const min = Math.min(Math.abs(a), Math.abs(b));
+  const max = Math.max(Math.abs(a), Math.abs(b));
   return Math.round(Math.random() * (max - min + 1) + min);
 };
-console.log(randomNumber(3, 23));
+getRandomNumber(3, 23);
 
 
-let lineLength=function (line, number){
-if (line.length >= number){
-  console.log('Максимальная длина комментария не больше ' + number);
-  return '';
-}
-return line;
+const getLineLength=function (line, number){
+return line.length >= number ? false : true;
 };
 let phrase = 'Съешь ещё этих мягких французских булок';
-console.log(lineLength(phrase, 12));
+getLineLength(phrase, 12);
 
