@@ -1,3 +1,4 @@
+
 const getRandomNumber = function (first, second) {
   const min = Math.min(Math.abs(first), Math.abs(second));
   const max = Math.max(Math.abs(first), Math.abs(second));
@@ -6,9 +7,10 @@ const getRandomNumber = function (first, second) {
 getRandomNumber(3, 23);
 
 
-const getLineLength = function (number, line) {
- return !(line.length >= number);
+const isLineValid = function (number, line) {
+  return ! (line.length >= number);
 };
 const phrase = 'Съешь ещё этих мягких французских булок';
-getLineLength(12, phrase);
+isLineValid(12, phrase);
+
 
