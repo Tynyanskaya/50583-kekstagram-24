@@ -12,11 +12,11 @@ const MESSAGES = [
 const DESCRIPTIONS = ['№1','№2', '№3', '№4', '№5', '№6', '№7', '№8', '№9', '№10', '№11', '№12', '№13', '№14', '№15', '№16', '№17', '№18',
   '№19', '№20', '№21', '№22', '№23', '№24', '№25'];
 
-// eslint-disable-next-line no-unused-vars
+
 const MAX_PHOTO = 25;
 const MAX_AVATAR = 6;
 const COMMENT_NUM = 3;
-const Likes = {
+const likesCount = {
   MIN: 15,
   MAX: 200,
 };
@@ -36,8 +36,8 @@ const getPhotoUrl = function(id) {
   return `photos/${ id }.jpg`;
 };
 
-const getAvatar = function(i) {
-  return `img/avatar-${  getRandomNumber(1, i)  }.svg`;
+const getAvatar = function(ii) {
+  return `img/avatar-${  getRandomNumber(1, ii)  }.svg`;
 };
 
 const getRandomComment = function() {
@@ -63,7 +63,7 @@ const getPhoto = function (id) {
     id: id,
     url: getPhotoUrl(id),
     description: getRandomElement(DESCRIPTIONS),
-    likes: getRandomNumber(Likes.MIN, Likes.MAX),
+    likes: getRandomNumber(likesCount.MIN, likesCount.MAX),
     comments: getComments(COMMENT_NUM),
   };
 };
@@ -77,5 +77,5 @@ const getPhotos = function (count) {
   }
   return photos;
 };
-getPhotos();
+getPhotos(MAX_PHOTO);
 
