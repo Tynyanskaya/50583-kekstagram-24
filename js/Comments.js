@@ -13,13 +13,13 @@ const MESSAGES = [
 
 const MAX_AVATAR = 6;
 
-const getAvatar = function(ii) {
-  return `img/avatar-${  getRandomNumber(1, ii)  }.svg`;
+const getAvatar = function(max) {
+  return `img/avatar-${  getRandomNumber(1, max)  }.svg`;
 };
 
 const getRandomComment = function() {
   return {
-    id: Math.round(Math.random()*100),
+    id: getRandomNumber(1, 500),
     avatar: getAvatar(MAX_AVATAR),
     message: getRandomElement(MESSAGES),
     name: getRandomElement(NAMES),
