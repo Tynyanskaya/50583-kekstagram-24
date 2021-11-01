@@ -12,7 +12,7 @@ const likesCount = {
 };
 
 const getPhotoUrl = function(id) {
-  return `photos/${ id }.jpg`;
+  return `photos${ id }.jpg`;
 };
 
 const getPhoto = function (id) {
@@ -25,7 +25,7 @@ const getPhoto = function (id) {
   };
 };
 
-const getPhotos = function (count) {
+export const getPhotos = function (count) {
   const photos = [];
   for (let i = 0; i < count; i++) {
     const id = i + 1;
