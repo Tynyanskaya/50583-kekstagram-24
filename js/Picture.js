@@ -1,6 +1,4 @@
-import {getPhotos} from './Photo.js'; // нужно сделать экспорт ф-ии
-import {getPhoto} from './Photo.js';
-//import {getPhotoUrl} from './Photo.js';
+import {getPhotos} from './Photo.js';
 
 const conteiner = document.createDocumentFragment();
 const pictureTemplate = document.querySelector('#picture').content;
@@ -15,10 +13,10 @@ const renderPhoto = function(picPh){
   pictureElement.querySelector('.picture__likes').textContent = picPh.likes;
   return pictureElement;
 };
-const picPhoto = getPhoto();
+
 const renderPhotos = function( block, elements){
   elements.forEach ( () => {
-    conteiner.appendChild(renderPhoto(picPhoto));
+    conteiner.appendChild(renderPhoto(elements));
   } );
   block.appendChild(conteiner);
 };

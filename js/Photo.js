@@ -25,7 +25,7 @@ const getPhoto = function (id) {
   };
 };
 
-export const getPhotos = function (count) {
+const getPhotos = function (count) {
   const photos = [];
   for (let i = 0; i < count; i++) {
     const id = i + 1;
@@ -35,3 +35,5 @@ export const getPhotos = function (count) {
   return photos;
 };
 getPhotos(MAX_PHOTO);
+
+export {getPhotos};
