@@ -34,3 +34,4 @@ export const getComments = function (count) {
   }
   return comments;
 };
+
