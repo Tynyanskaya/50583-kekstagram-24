@@ -26,7 +26,7 @@ const getRandomComment = function() {
   };
 };
 
-const getComments = function (count) {
+export const getComments = function (count) {
   const comments = [];
   for (let i = 0; i < count; i++){
     const id = i + 1;
@@ -34,4 +34,4 @@ const getComments = function (count) {
   }
   return comments;
 };
-export {getComments};
+
